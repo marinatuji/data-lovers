@@ -50,7 +50,7 @@ body {
   justify-content: space-between;
 }
 
-.news {
+#news {
   background-color: rgba(12, 9, 24, 0.637);
   width: 50%;
   height: 300px;

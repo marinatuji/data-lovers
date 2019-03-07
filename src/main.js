@@ -1,21 +1,25 @@
-// const steam = require('./src/data/steam/steam.json');
-window.onload = function() {
+window.onload = function () {
   showNews();
   alert('carregou');
-}; //checar a sintaxe
+};
 
-//importar os dados do steam.js
 function getData() {
   return STEAM['appnews']['newsitems'];
 }
-//rever trazer os dados
 
 function showNews() {
-  console.log('DEU CERTO', getData());
+  let listNews = document.getElementById("news");
+  listNews.innerHTML = `
+    ${getData().map((news) => `
+      <ul class="all-news">
+        <li>${news["title"]} / ${news["feedlabel"]}</li>
+      </ul>
+      `).join("")}
+  `
 }
 
 function filterNews() {
- 
+
 }
 
 function orderByDate() {
