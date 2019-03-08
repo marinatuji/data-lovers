@@ -18,9 +18,44 @@ function showNews() {
   `
 }
 
-function filterNews() {
-
+function parseDate(date) {
+  return new Date(date * 1000);
 }
 
-function orderByDate() {
+function filterNewsByDate(date) { //validar data
+  return getData().filter(eachNews => {
+    return parseDate(eachNews["date"]) === date;
+  });
+}
+
+function filterNewsByTitle(title) { //validar dados se existe
+  return getData().filter(eachNews => {
+    return parseDate(eachNews["title"]) === title;
+  });
+}
+
+addEventListener("click", function () {
+  let valueInputDate = document.getElementById("idDoInput").value;
+  let valueInputTitle = document.getElementById("idDoInput").value;
+  let newArray = [];
+  if (valueInputDate) {
+    newArray = filterNewsByDate(valueInputDate);
+  } else if (valueInputTitle) {
+    newArray = filterNewsByTitle(valueInputTitle);
+  }
+  showResult(newArray);
+});
+
+function showResult(filterNews) {
+  let listNews = document.getElementById("news");
+  listNews.innerHTML = `
+    ${filterNews.map((eachNews) => `
+      <ul class="all-news">
+        <li>${eachNews["title"]} / ${eachNews["feedlabel"]}</li>
+      </ul>
+      `).join("")}
+  `
+}
+
+function orderByDate() {//challenge
 }
