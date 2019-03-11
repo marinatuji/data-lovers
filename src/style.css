@@ -27,23 +27,36 @@ body {
   height: 5vw;  
 }
 
-.graphic {
+.img-graphic {
   width: 40px;
   height: 40px;
 }
 
-.filter {
+.img-filter {
   width: 40px;
   height: 40px;
 }
 
-.calendar {
+.filters {
+  width: 100px;
+  font-family: Impact, Haettenschweiler;
+  font-size: 20px;
+  color:rgb(23, 23, 23);
+}
+
+.options {
+  color:rgb(23, 23, 23);
+  font-family: Impact, Haettenschweiler;
+  font-size: 18px;
+}
+
+.img-calendar {
   width: 50px;
   height: 50px;
   margin-left:5%;
 }
 
-.root {
+.data-set {
   background-color: none;
   width: 100%;
   display: flex;
@@ -63,6 +76,27 @@ body {
   width: 45%;
   height: 300px;
   margin-left: 1%;
+}
+
+.filter{
+  background-color: #800000;
+  color:black;
+  font-family: Impact;
+  margin-top: 100px;
+  padding-top: 30px;
+  padding-left: 10%;
+  width: 100vw;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+}
+
+.input-filter{
+  width: 100vw;
+}
+
+.filtered-news{
+
 }
 
 footer{

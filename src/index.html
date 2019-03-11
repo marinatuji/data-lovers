@@ -11,12 +11,18 @@
   <nav class="nav-bar">
     <img class="logo-steam" src="assets/logoSteam.png" alt="Logomarca da Steam">
     <ul class="icon-list">
-      <li><img class="graphic" src="assets/graphic.png" alt="Grafico"></li>
-      <li><img class="filter" src="assets/filter.png" alt="Filtro"></li>
-      <li><img class="calendar" src="assets/calendar.png" alt="Calendário com lupa"></li>
+      <li><img class="img-graphic" src="assets/graphic.png" alt="Grafico"></li>
+      <li><img class="img-filter" src="assets/filter.png" alt="Filtro">
+        <select class="filters" value="Filtro">
+          <option class="filters option" value="Filtro">Filtro</option>
+          <option class="filters option" value="por Data">por Data</option>
+          <option class="filters option" value="por Título">por Título</option>
+        </select>
+      </li>
+      <li><img class="img-calendar" src="assets/calendar.png" alt="Calendário com lupa"></li>
     </ul>
   </nav>
-  <main class="root">
+  <main class="data-set">
     <section class="team-fortress">
       <h3>TEAM FORTRESS-2</h3>
       <img></img>
@@ -32,10 +38,22 @@
       <p></p>
     </section>
   </main>
+  <section class="filter">
+    <form class="input-filter">
+      <input class="input-by-title" name="byTitle" type="text" placeholder="Digite um título">
+      <input class="input by-date" name="byDate" type="text" placeholder="Digite uma data">
+      <input class="input button" type="submit" name="filter" value="Filtrar">
+    </form>
+    <section id="filtered-news">
+      <h3>Resultado do Filtro:</h3>
+      <div id="show-filtered-news"></div>
+    </section>
+  </section>
   <footer>
     <h3>Contact</h3>
   </footer>
-  <script type="text/javascript" src="./data/steam/steam.js"></script>
-  <script type="text/javascript" src="main.js"></script>
+  <script src="./data/steam/steam.js"></script>
+  <script src="main.js"></script>
 </body>
+
 </html>
