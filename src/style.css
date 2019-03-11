@@ -66,27 +66,31 @@ body {
 #news {
   background-color: rgba(12, 9, 24, 0.637);
   width: 50%;
-  height: 300px;
-  margin-right: 1%;
+  
+}
+
+#news h3 {
+  font-family: 'Sniglet';
+  color:white;
 }
 
 .team-fortress {
   color: white;
   background-color: #3f3d3d;
-  width: 45%;
-  height: 300px;
-  margin-left: 1%;
+  width: 49%;
+  background-image: url();
+  padding-left: 2%;
+  font-family: 'Sniglet';
 }
 
 .filter{
   background-color: #800000;
-  color:black;
-  font-family: Impact;
-  margin-top: 100px;
+  color:#0a101d;
+  font-family: 'Sniglet';
+  font-size: 20px;
   padding-top: 30px;
   padding-left: 10%;
   width: 100vw;
-  height: 400px;
   display: flex;
   flex-direction: column;
 }
@@ -102,4 +106,5 @@ body {
 footer{
   background-color: black;
   color: aliceblue;
+  font-family: 'Sniglet';
 }

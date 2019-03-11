@@ -49,12 +49,10 @@ btnFilter.addEventListener("click", function (event) {
 });
 
 function showResult(filterNews) {
-  let listNews = document.getElementById("news");
+  let listNews = document.querySelector("#list-news");//testando nomes
   listNews.innerHTML = `
     ${filterNews.map((eachNews) => `
-      <ul class="all-news">
-        <li>${eachNews["title"]} / ${eachNews["feedlabel"]}</li>
-      </ul>
+      <li>${eachNews["title"]} / ${eachNews["feedlabel"]}</li>
       `).join("")}
   `
 }
@@ -63,9 +61,7 @@ function filterNews(filterNews) {
   let filteredNews = document.querySelector("#show-filtered-news");
   filteredNews.innerHTML = `
     ${filterNews.map((eachNews) => `
-      <ul class="all-news">
-        <li>${eachNews["title"]} / ${eachNews["feedlabel"]}</li>
-      </ul>
+      <li>${eachNews["title"]} / ${eachNews["feedlabel"]}</li>
       `).join("")}
   `
 }
