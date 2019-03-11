@@ -1,6 +1,6 @@
 window.onload = function () {
   showNews();
-  alert('carregou');
+  // alert('carregou');
 };
 
 function getData() {
