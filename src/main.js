@@ -1,5 +1,5 @@
 window.onload = function () {
-  showNews();
+  showAllNews();
   alert('carregou');
 };
 
@@ -7,13 +7,11 @@ function getData() {
   return STEAM['appnews']['newsitems'];
 }
 
-function showNews() {
-  let listNews = document.getElementById("news");
+function showAllNews() {
+  let listNews = document.getElementById("list-news");
   listNews.innerHTML = `
     ${getData().map((news) => `
-      <ul class="all-news">
-        <li>${news["title"]} / ${news["feedlabel"]}</li>
-      </ul>
+      <li>${news["title"]} / ${news["feedlabel"]}</li>
       `).join("")}
   `
 }
@@ -49,7 +47,7 @@ btnFilter.addEventListener("click", function (event) {
 });
 
 function showResult(filterNews) {
-  let listNews = document.querySelector("#list-news");//testando nomes
+  let listNews = document.querySelector("#list-news");
   listNews.innerHTML = `
     ${filterNews.map((eachNews) => `
       <li>${eachNews["title"]} / ${eachNews["feedlabel"]}</li>
@@ -62,6 +60,15 @@ function filterNews(filterNews) {
   filteredNews.innerHTML = `
     ${filterNews.map((eachNews) => `
       <li>${eachNews["title"]} / ${eachNews["feedlabel"]}</li>
+       `).join("")}
+  `
+}
+
+function showSortNews() {
+  let sortNews = document.querySelector(".show-sort-news");
+  sortNews.innerHTML = `
+    ${sortNews.map((eachNews) => `
+      <li>${eachNews["title"]} / ${parseDate(eachNews["date"])}</li>
       `).join("")}
   `
 }
