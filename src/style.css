@@ -8,6 +8,7 @@ body {
   width: 100%;
 	justify-content: space-around;
   align-items: center;
+  height: 130px;
   }
 
 .icon-list {
@@ -15,7 +16,6 @@ body {
   margin-left: 5%;
   align-content: space-between;
   display: flex;
-  
 }
 
 .icon-list li{
@@ -65,8 +65,10 @@ body {
   margin-left: 1%;
 }
 
-footer{
+#footer{
   background-color: black;
   color: aliceblue;
+  height: 60%;
+  size: 500px
 }
 

@@ -8,7 +8,12 @@
 .gallery .control-operator:nth-of-type(2):target ~ .controls .control-button:nth-of-type(2),
 .gallery .control-operator:nth-of-type(3):target ~ .controls .control-button:nth-of-type(3),
 .gallery .control-operator:nth-of-type(4):target ~ .controls .control-button:nth-of-type(4),
-.gallery .control-operator:nth-of-type(5):target ~ .controls .control-button:nth-of-type(5) {
+.gallery .control-operator:nth-of-type(5):target ~ .controls .control-button:nth-of-type(5)
+.gallery .control-operator:nth-of-type(6):target ~ .controls .control-button:nth-of-type(6),
+.gallery .control-operator:nth-of-type(7):target ~ .controls .control-button:nth-of-type(7),
+.gallery .control-operator:nth-of-type(8):target ~ .controls .control-button:nth-of-type(8),
+.gallery .control-operator:nth-of-type(9):target ~ .controls .control-button:nth-of-type(9),
+.gallery .control-operator:nth-of-type(10):target ~ .controls .control-button:nth-of-type(10) {
   color: white;
   color: rgba(255, 255, 255, 0.8);
 }
