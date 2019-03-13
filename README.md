@@ -3,7 +3,7 @@
 
 Neste projeto foi desenvolvida uma página web, com notícias focadas no jogo Team Fortress 2. Nele é possível filtrar notícias por data, título e autor.
 
-Link do trello utilizado para organização das tarefas -> ()
+Link do trello utilizado para organização das tarefas -> (https://trello.com/b/TDzxl32o/data-lovers)
 
 ## PERSONAS <h2>
 
@@ -11,8 +11,7 @@ Link do trello utilizado para organização das tarefas -> ()
 ![Personas](personaCarlos.pdf)
 
 ## PROTÓTIPOS <h2>
-## PROTÓTIPO 1 <h4>
-
+PROTÓTIPO 1 
 ![Protótipo](tela1.png)
 ![Protótipo](tela2.png)
 ![Protótipo](tela3.png)
