@@ -1,15 +1,13 @@
 
 ## PROJETO DATA LOVERS <h1>
 
-![Fluxograma](fluxogramaCypher.png)
-
 Neste projeto foi desenvolvida uma página web, com notícias focadas no jogo Team Fortress 2. Nele é possível filtrar notícias por data, título e autor.
 
 Link do trello utilizado para organização das tarefas -> ()
 
 ## PERSONAS <h2>
 
-![Personas](personaLuana.pdf)
+![Personas](persona.png)
 ![Personas](personaCarlos.pdf)
 
 ## PROTÓTIPOS <h2>
