@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800");
 body {
   margin: 0;
 }
@@ -23,8 +24,8 @@ body {
 }
 
 .logo-steam {
-  width: 15vw;
-  height: 5vw;  
+  /* width: 15vw;
+  height: 5vw;   */
 }
 
 .img-graphic {
@@ -37,11 +38,17 @@ body {
   height: 40px;
 }
 
-.filters {
-  width: 100px;
-  font-family: Impact, Haettenschweiler;
+.dropdown {
+  font-family: 'OpenSans';
   font-size: 20px;
-  color:rgb(23, 23, 23);
+  color: #fff;
+}
+
+.dropdown-filters {
+  /* width: 100px; */
+  font-family: 'OpenSans';
+  font-size: 20px;
+  color:#fff;
 }
 
 .options {
@@ -66,12 +73,12 @@ body {
 #news {
   background-color: rgba(12, 9, 24, 0.637);
   width: 50%;
-  
 }
 
 #news h3 {
   font-family: 'Sniglet';
   color:white;
+  padding-left: 5%;
 }
 
 .team-fortress {
@@ -79,8 +86,15 @@ body {
   background-color: #3f3d3d;
   width: 49%;
   background-image: url();
-  padding-left: 2%;
+  padding-left: 5%;
   font-family: 'Sniglet';
+}
+
+#list-news {
+  list-style: none;
+  font-family: 'Sniglet';
+  color: #fff;
+  background-image: url();
 }
 
 .filter{
@@ -90,21 +104,43 @@ body {
   font-size: 20px;
   padding-top: 30px;
   padding-left: 10%;
-  width: 100vw;
+  width: 90%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 
-.input-filter{
-  width: 100vw;
+.filtered-news h3 {
+  font-family: 'Sniglet';
 }
 
-.filtered-news{
+#show-filtered-news{
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+}
 
+
+.list-filtered-news{
+  font-family: 'OpenSans', sans-serif 600 40px;
+  background-color: transparent;
+  border-radius: 10px;
+  border: solid #fff 2px;
+  width: 30%;
+  padding-right: 5%;
+  margin: 2% 0% 5% 2%;
+}
+
+.sort-news{
+  padding-left: 5%;
 }
 
 footer{
   background-color: black;
   color: aliceblue;
   font-family: 'Sniglet';
+}
+
+footer h3{
+  padding-left: 2%;
 }

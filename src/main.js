@@ -1,6 +1,7 @@
 window.onload = function () {
   showAllNews();
-  alert('carregou');
+  showSortNews();
+  showGroupByMonth();
 };
 
 function getData() {
@@ -11,13 +12,18 @@ function showAllNews() {
   let listNews = document.getElementById("list-news");
   listNews.innerHTML = `
     ${getData().map((news) => `
-      <li>${news["title"]} / ${news["feedlabel"]}</li>
+      <li>${news["title"]} / ${news["feedlabel"]} <br>
+      in ${parseDate(news["date"])} - <a class="anchor-list-news" href="${news["url"]}">Leia mais</a></li>
       `).join("")}
   `
 }
 
 function parseDate(date) {
   return new Date(date * 1000).toLocaleDateString("pt-br");
+}
+
+function catchMonth(date) {
+  return new Date(date * 1000).getMonth() + 1;
 }
 
 function filterNewsByDate(date) { //validar data
@@ -28,9 +34,9 @@ function filterNewsByDate(date) { //validar data
 
 function filterNewsByTitle(title) { //validar dados se existe
   return getData().filter(eachNews => {
-    return eachNews["title"] === title;
+    return eachNews["title"].includes(title);
   });
-}//procurar busca parcial, contem string
+}
 
 const btnFilter = document.querySelector("input[name='filter']");
 btnFilter.addEventListener("click", function (event) {
@@ -43,37 +49,32 @@ btnFilter.addEventListener("click", function (event) {
   } else if (valueInputTitle) {
     newArray = filterNewsByTitle(valueInputTitle);
   }
-  filterNews(newArray);
+  showFilteredNews(newArray);
 });
 
-function showResult(filterNews) {
-  let listNews = document.querySelector("#list-news");
-  listNews.innerHTML = `
-    ${filterNews.map((eachNews) => `
-      <li>${eachNews["title"]} / ${eachNews["feedlabel"]}</li>
-      `).join("")}
-  `
-}
-
-function filterNews(filterNews) {
+function showFilteredNews(filterNews) {
+  if (filterNews.length === 0) {
+    alert("Inválido");
+  }
   let filteredNews = document.querySelector("#show-filtered-news");
   filteredNews.innerHTML = `
-    ${filterNews.map((eachNews) => `
-      <li>${eachNews["title"]} / ${eachNews["feedlabel"]}</li>
-       `).join("")}
-  `
+      ${filterNews.map((eachNews) => `
+        <div class="list-filtered-news"><h3${eachNews["title"]} <br> ${eachNews["feedlabel"]} in ${parseDate(eachNews["date"])}
+        </div>
+         `).join("")}
+    `
 }
 
 function showSortNews() {
   let sortNews = document.querySelector(".show-sort-news");
   sortNews.innerHTML = `
-    ${sortNews.map((eachNews) => `
-      <li>${eachNews["title"]} / ${parseDate(eachNews["date"])}</li>
+    ${sortNewest().map((eachNews) => `
+      <div>${eachNews["title"]} / ${parseDate(eachNews["date"])}</div>
       `).join("")}
   `
 }
 
-function sortNewest() {//challenge
+function sortNewest() {
   return getData().sort((a, b) => {
     if (parseDate(b["date"]) < parseDate(a["date"])) {
       return -1;
@@ -82,4 +83,24 @@ function sortNewest() {//challenge
     }
     return 0;
   });
+}
+
+function showGroupByMonth() {
+  let groupNews = document.querySelector(".show-data-set");
+  groupNews.innerHTML = `
+    ${groupByMonth().map((frequency,index) => `
+      <div>${index} | ${frequency}</div>
+      `).join("")}
+  `
+}
+
+function groupByMonth() {
+  return getData().reduce((acc, obj) => {
+    var key = catchMonth(obj["date"]);
+    if (!acc[key]) { //negação
+      acc[key] = 0;
+    }
+    acc[key]++;
+    return acc;
+  }, []); { }
 }

@@ -10,16 +10,26 @@
 
 <body>
   <nav class="nav-bar">
-    <img class="logo-steam" src="assets/logoSteam.png" alt="Logomarca da Steam">
+    <img class="logo-steam" src="assets/tf2.png" alt="Logomarca da Steam">
     <ul class="icon-list">
       <li><img class="img-graphic" src="assets/graphic.png" alt="Grafico"></li>
-      <li><img class="img-filter" src="assets/filter.png" alt="Filtro">
-        <select class="filters" value="Filtro">
-          <option class="filters option" value="Filtro">Filtro</option>
-          <option class="filters option" value="por Data">por Data</option>
-          <option class="filters option" value="por Título">por Título</option>
+      <li class="dropdown"><img class="img-filter" src="assets/filter.png" alt="Filtro">
+        <select>
+            <option class="filters option" value="Filtro">Filtro</option>
+            <option class="filters option" value="por Data">por Data</option>
+            <option class="filters option" value="por Título">por Título</option>
+          </li>
         </select>
-      </li>
+        <!-- <a class="dropdown-filters" data-toggle="dropdown">Filtrar<span class="caret"></span>
+        </a>
+          <ul class="dropdown-menu">
+            <li>
+              <a href="#">por Data</a>
+            </li>
+            <li>
+              <a href="#">por Título</a>
+            </li>
+          </ul> -->
       <li><img class="img-calendar" src="assets/calendar.png" alt="Calendário com lupa"></li>
     </ul>
   </nav>
@@ -27,9 +37,10 @@
     <section class="team-fortress">
       <h3>TEAM FORTRESS-2</h3>
       <img></img>
+      <div class="show-data-set"></div>
     </section>
     <aside id="news">
-      <h3>News</h3>
+      <h3>NEWS</h3>
       <img class="news-team-fortress" src="" alt="">
       <ul id="list-news">
       </ul>
@@ -38,10 +49,10 @@
   <section class="filter">
     <form class="input-filter">
       <input class="input-by-title" name="byTitle" type="text" placeholder="Digite um título">
-      <input class="input by-date" name="byDate" type="text" placeholder="Digite uma data">
+      <input class="input-by-date" name="byDate" type="text" placeholder="Digite uma data">
       <input class="input button" type="submit" name="filter" value="Filtrar">
     </form>
-    <section id="filtered-news">
+    <section class="filtered-news">
       <h3>Resultado do Filtro:</h3>
       <div id="show-filtered-news"></div>
     </section>
