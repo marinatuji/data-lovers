@@ -3,11 +3,22 @@
 
 ![Fluxograma](fluxogramaCypher.png)
 
-Neste projeto foi desenvolvida uma página web,
+Neste projeto foi desenvolvida uma página web, com notícias focadas no jogo Team Fortress 2. Nele é possível filtrar notícias por data, título e autor.
 
-Link do trello utilizado para organização das tarefas. 
+Link do trello utilizado para organização das tarefas -> ()
 
-## PERSONAS <h3>
+## PERSONAS <h2>
 
-![Personas](persona.pdf)
+![Personas](personaLuana.pdf)
+![Personas](personaCarlos.pdf)
+
+## PROTÓTIPOS <h2>
+## PROTÓTIPO 1 <h4>
+
+![Protótipo](tela1.png)
+![Protótipo](tela2.png)
+![Protótipo](tela3.png)
+
+
+
 
