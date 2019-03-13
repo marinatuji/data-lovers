@@ -4,10 +4,11 @@
 <head>
   <meta charset="utf-8">
   <title>Data Lovers</title>
-  <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="normalize.css">
   <link rel="stylesheet" href="gallery.prefixed.css">
   <link rel="stylesheet" href="gallery.theme.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sniglet">
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
@@ -25,7 +26,6 @@
       <li><img class="img-calendar" src="assets/calendar.png" alt="Calendário com lupa"></li>
     </ul>
   </nav>
-
 
   <div class="gallery autoplay items-10">
 
@@ -98,27 +98,38 @@
     </div>
   </div>
 
-  <main class="root">
+  <main class="data-set">
     <section class="team-fortress">
       <h3>TEAM FORTRESS-2</h3>
       <img></img>
     </section>
     <aside id="news">
-      <h2>News</h2>
+      <h3>News</h3>
       <img class="news-team-fortress" src="" alt="">
-      <ul>
-        <li></li>
+      <ul id="list-news">
       </ul>
     </aside>
-    <section class="show-results">
-      <p></p>
-    </section>
   </main>
-  <footer id="footer">
+  <section class="filter">
+    <form class="input-filter">
+      <input class="input-by-title" name="byTitle" type="text" placeholder="Digite um título">
+      <input class="input by-date" name="byDate" type="text" placeholder="Digite uma data">
+      <input class="input button" type="submit" name="filter" value="Filtrar">
+    </form>
+    <section id="filtered-news">
+      <h3>Resultado do Filtro:</h3>
+      <div id="show-filtered-news"></div>
+    </section>
+  </section>
+  <section class="sort-news">
+    <h3>Notícias (mais recentes):</h3>
+    <div class="show-sort-news"></div>
+  </section>
+  <footer>
     <h3>Contact</h3>
   </footer>
-  <script type="text/javascript" src="./data/steam/steam.js"></script>
-  <script type="text/javascript" src="main.js"></script>
+  <script src="./data/steam/steam.js"></script>
+  <script src="main.js"></script>
 </body>
 
 </html>

@@ -27,23 +27,36 @@ body {
   height: 5vw;  
 }
 
-.graphic {
+.img-graphic {
   width: 40px;
   height: 40px;
 }
 
-.filter {
+.img-filter {
   width: 40px;
   height: 40px;
 }
 
-.calendar {
+.filters {
+  width: 100px;
+  font-family: Impact, Haettenschweiler;
+  font-size: 20px;
+  color:rgb(23, 23, 23);
+}
+
+.options {
+  color:rgb(23, 23, 23);
+  font-family: Impact, Haettenschweiler;
+  font-size: 18px;
+}
+
+.img-calendar {
   width: 50px;
   height: 50px;
   margin-left:5%;
 }
 
-.root {
+.data-set {
   background-color: none;
   width: 100%;
   display: flex;
@@ -53,22 +66,47 @@ body {
 #news {
   background-color: rgba(12, 9, 24, 0.637);
   width: 50%;
-  height: 300px;
-  margin-right: 1%;
+  
+}
+
+#news h3 {
+  font-family: 'Sniglet';
+  color:white;
 }
 
 .team-fortress {
   color: white;
   background-color: #3f3d3d;
-  width: 45%;
-  height: 300px;
-  margin-left: 1%;
+  width: 49%;
+  background-image: url();
+  padding-left: 2%;
+  font-family: 'Sniglet';
+}
+
+.filter{
+  background-color: #800000;
+  color:#0a101d;
+  font-family: 'Sniglet';
+  font-size: 20px;
+  padding-top: 30px;
+  padding-left: 10%;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.input-filter{
+  width: 100vw;
+}
+
+.filtered-news{
+
 }
 
 #footer{
   background-color: black;
   color: aliceblue;
   height: 60%;
-  size: 500px
+  size: 500px;
+  font-family: 'Sniglet';
 }
-
